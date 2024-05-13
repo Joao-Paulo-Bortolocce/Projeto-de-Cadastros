@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/cadastros.css">
+    <title>Cadastro de Usuários</title>
+</head>
+<body>
+    <section class="cabeçalhoCompleto">
+        <div class="cabeçalhoCentralizado">
+            <div class="item">
+                <div style="color: #DA2D00; text-decoration: underline; text-decoration-color: white; font-size: 250%; -webkit-text-stroke: 1px white;">Cadastro</div>
+                <div style="color: white; font-size: 250%; text-decoration: underline; text-decoration-color: #DA2D00; -webkit-text-stroke: 1px #DA2D00;">de</div>
+                <div style="color: #DA2D00; text-decoration: underline;  text-decoration-color: white; font-size: 250%;  -webkit-text-stroke: 1px white;">Usuário</div>   
+            </div>
+            <div >
+                <a href="../index.html"><img style="width: 70%; max-width: 80px; margin-top: 0px;" src="./imgs/logo loja.png"></a>
+            </div>
+        </div>
+    </section>
+    <section class="container w-50" style="border: dashed 2px black;">
+        <form class="row g-3 needs-validation" novalidate id="formCadUsuario">
+            <div class="row mt-4">
+                <div class="col-md-8" style="margin: 0 auto;">
+                    <label for="Nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="Nome" required="required">
+                    <div class="invalid-feedback">
+                        Por favor, informe seu Nome!
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-8" style="margin: 0 auto;">
+                    <label for="Senha" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="Senha" required="required">
+                    <div class="invalid-feedback">
+                        Por favor, informe sua senha!
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4" style="justify-content: center;">
+                <div class="col-md-8">
+                    <label for="Tipo" class="form-label">Tipo</label>
+                    <select class="form-select" id="Tipo" required="required" aria-label="Default select example">
+                        <option class="" selected value="">Selecione o tipo de usuário</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Visitante">Visitante</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Por favor, informe seu tipo de acesso!
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4" style="justify-content: center;">
+                <div class="col-md-8">
+                    <label for="Email" class="form-label">E-mail</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" class="form-control" id="Email" aria-describedby="inputGroupPrepend"
+                        required="required">
+                        <div class="invalid-feedback">
+                            Por favor, informe seu E-mail!
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div  class="row-mt-4">
+                <div id="perguntaSenha" >
+                    
+                </div>
+            </div>
+
+            <div class="row mt-4" >
+                <div class="col-md-12" style="justify-content: center;  margin: 0 auto; display: flex;">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="concordar" required="required">
+                        <label class="form-check-label" for="concordar">
+                            Concordo com os termos de utilização de meus dados
+                        </label>
+                        <div class="invalid-feedback">
+                            Por Favor, selecione o campo para finalizar o Cadastro!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+
+                <div class="col-md-12" style="justify-content: center;  margin: 0 auto; display: flex;">
+                    <button class="btn btn-primary" type="submit">Cadastrar</button>
+                </div>
+            </div>
+        </form>
+        <br>
+    </section>
+    <br>
+    <section id="relatorio" class="container w-75">
+        
+    </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="../scripts/formatadores.js"></script>
+<script src="../scripts/persistencia/usuarioDAO.js"></script>
+<script src="../scripts/modelo/usuario.js"></script>
+<script src="../scripts/controle/usuarioCTRL.js"></script>
+<script src="../scripts/cadastroUsuarios.js"></script>
+
+</html>

@@ -1,0 +1,34 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    width: 100%;
+}
+
+
+.cabeçalhoCompleto{
+    width: 100%;
+    margin-bottom: 2%;
+    background: linear-gradient(#0049AC,black);
+    height: 80px;
+    align-items:flex-end;
+}
+
+.cabeçalhoCentralizado{
+    height: 100%;
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.item{
+    width: 90%;
+    max-width: 400px;
+    height: 80%;
+    align-items:flex-end;
+    display: flex;
+    justify-content: space-around
+}
